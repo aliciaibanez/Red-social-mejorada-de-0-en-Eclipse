@@ -14,11 +14,12 @@ public class Muro {
 		entradas.add(entrada);
 	}
 	
+	
 	public void mostrarDetallesPorPantalla() {
 		StringBuilder textoAMostrar = new StringBuilder();
 		
 		for (Entrada entrada : entradas) {
-			textoAMostrar.append(entrada).append("\n");
+			entrada.mostrarDetallesPorPantalla();
 		}
 		System.out.println(textoAMostrar);
 	}

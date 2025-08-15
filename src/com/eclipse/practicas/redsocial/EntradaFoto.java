@@ -23,10 +23,11 @@ public class EntradaFoto extends Entrada {
 	public String getTituloImagen() {
 		return titulo;
 	}
-
+	@Override
 	public void mostrarDetallesPorPantalla() {
-		StringBuilder textoAMostrar = new StringBuilder();
-		System.out.println(textoAMostrar.append(urlImagen).append(titulo));
+		super.mostrarDetallesPorPantalla();
+		System.out.println ("urlImagen");
+		System.out.println ("titulo");
 	}
 
 	public String toString() {

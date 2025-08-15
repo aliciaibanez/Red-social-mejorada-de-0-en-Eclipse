@@ -77,4 +77,14 @@ public class Entrada {
 		return textoADevolver.append(getUsuario()).append("\n").append(publicadoHaceStr).append("\n")
 				.append(getCantidadMeGusta()).append("\n").append(comentariosStr).append("\n").toString();
 	}
+
+	public void mostrarDetallesPorPantalla() {
+		String comentariosStr = "";
+		for (String comentario : comentarios) {
+			comentariosStr += comentario;
+		}
+		System.out.println(usuario + getMomentoPublicacion() + cantidadMeGusta + comentariosStr);
+
+	}
+
 }

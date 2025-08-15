@@ -16,10 +16,10 @@ public class EntradaTexto extends Entrada {
 	public String getMensaje() {
 		return mensaje;
 	}
-
+	@Override
 	public void mostrarDetallesPorPantalla() {
-		StringBuilder textoAMostrar = new StringBuilder();
-		System.out.println(textoAMostrar.append(mensaje));
+		super.mostrarDetallesPorPantalla();
+		System.out.println(mensaje);
 	}
 
 	@Override

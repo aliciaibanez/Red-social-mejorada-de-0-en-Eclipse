@@ -15,10 +15,10 @@ public class EntradaEvento extends Entrada {
 		return evento;
 
 	}
-	
+	@Override
 	public void mostrarDetallesPorPantalla() {
-		StringBuilder textoAMostrar = new StringBuilder();
-		System.out.println(textoAMostrar.append(evento));
+		super.mostrarDetallesPorPantalla();
+		System.out.println(evento);
 	}
 
 	public String toString() {
