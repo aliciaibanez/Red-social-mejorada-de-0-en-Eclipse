@@ -32,47 +32,21 @@ public class MuroTest {
 		muro.addEntrada(entrada06);
 
 		System.out.println(muro);
-		String esperado = "Nacho\n" 
-				+ "Escrito hace 10 segundos\n"
-				+ "0\n" 
-				+ "No existen comentarios\n" 
-				+ "Recién llegado de mis vacaciones en Hawai!\n" 
-				+ "\n" 
-				
-				+ "Luis\n"
-				+ "Escrito hace 10 segundos\n" 
-				+ "0\n"
-				+ "No existen comentarios\n" 
-				+ "https://bit.ly/2W1dO09\n" 
-				+ "Gracias\n"
-				+ "\n"
+		String esperado = "Nacho\n" + "Escrito hace 10 segundos\n" + "0\n" + "No existen comentarios\n"
+				+ "Recién llegado de mis vacaciones en Hawai!\n" + "\n"
 
-				+ "Begoña\n" 
-				+ "Escrito hace 10 segundos\n"
-				+ "0\n" 
-				+ "No existen comentarios\n" 
-				+ "Está lloviendo ahí fuera...\n"
-				+ "\n" 
-				
-				+ "Cristina\n" 
-				+ "Escrito hace 10 segundos\n" 
-				+ "0\n" 
-				
-				+ "No existen comentarios\n" 
-				+ "https://bit.ly/3cY9vtD\n"
-				+ "Una foto de mi nevera\n" 
-				+ "\n"
-				+ "Pepe\n" 
-				+ "Escrito hace 10 segundos\n" 
-				+ "0\n" 
-				+ "Hoy, fiesta en mi casa\n" 
-				+ "\n" 
-				+ "Pepita\n"
-				
-				+ "Escrito hace 10 segundos\n" 
-				+ "0\n"
-				+ "Cena de empresa a las 21:00H\n" 
-				+ "\n";
+				+ "Luis\n" + "Escrito hace 10 segundos\n" + "0\n" + "No existen comentarios\n"
+				+ "https://bit.ly/2W1dO09\n" + "Gracias\n" + "\n"
+
+				+ "Begoña\n" + "Escrito hace 10 segundos\n" + "0\n" + "No existen comentarios\n"
+				+ "Está lloviendo ahí fuera...\n" + "\n"
+
+				+ "Cristina\n" + "Escrito hace 10 segundos\n" + "0\n"
+
+				+ "No existen comentarios\n" + "https://bit.ly/3cY9vtD\n" + "Una foto de mi nevera\n" + "\n" + "Pepe\n"
+				+ "Escrito hace 10 segundos\n" + "0\n" + "Hoy, fiesta en mi casa\n" + "\n" + "Pepita\n"
+
+				+ "Escrito hace 10 segundos\n" + "0\n" + "Cena de empresa a las 21:00H\n" + "\n";
 		assertEquals(esperado, muro.toString());
 	}
 

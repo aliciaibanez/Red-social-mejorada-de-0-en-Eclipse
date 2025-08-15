@@ -10,7 +10,7 @@ public class Muro {
 		entradas = new ArrayList<>();
 	}
 
-	public void addEntrada (Entrada entrada) {
+	public void addEntrada(Entrada entrada) {
 		entradas.add(entrada);
 	}
 
@@ -21,7 +21,6 @@ public class Muro {
 			textoADevolver.append(entrada).append("\n");
 		}
 
-		
 		return textoADevolver.toString();
 	}
 

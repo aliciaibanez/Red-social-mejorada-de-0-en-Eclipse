@@ -74,7 +74,7 @@ public class Entrada {
 		}
 		StringBuilder textoADevolver = new StringBuilder();
 
-		return textoADevolver.append(getUsuario()).append("\n").append(publicadoHaceStr)
-				.append("\n").append(getCantidadMeGusta()).append("\n").append(comentariosStr).append("\n").toString();
+		return textoADevolver.append(getUsuario()).append("\n").append(publicadoHaceStr).append("\n")
+				.append(getCantidadMeGusta()).append("\n").append(comentariosStr).append("\n").toString();
 	}
 }

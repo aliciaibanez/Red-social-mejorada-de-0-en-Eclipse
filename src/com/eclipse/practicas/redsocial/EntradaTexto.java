@@ -17,6 +17,9 @@ public class EntradaTexto extends Entrada {
 		return mensaje;
 	}
 
+	public void mostrarDetallesPorPantalla() {
+		
+	}
 	@Override
 	public String toString() {
 		
