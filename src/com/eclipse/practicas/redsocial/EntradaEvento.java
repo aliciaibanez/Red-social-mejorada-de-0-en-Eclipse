@@ -17,7 +17,6 @@ public class EntradaEvento extends Entrada {
 	}
 	@Override
 	public void mostrarDetallesPorPantalla() {
-		super.mostrarDetallesPorPantalla();
 		System.out.println(evento);
 	}
 

@@ -25,7 +25,6 @@ public class EntradaFoto extends Entrada {
 	}
 	@Override
 	public void mostrarDetallesPorPantalla() {
-		super.mostrarDetallesPorPantalla();
 		System.out.println ("urlImagen");
 		System.out.println ("titulo");
 	}

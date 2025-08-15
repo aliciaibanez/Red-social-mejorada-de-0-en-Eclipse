@@ -18,7 +18,6 @@ public class EntradaTexto extends Entrada {
 	}
 	@Override
 	public void mostrarDetallesPorPantalla() {
-		super.mostrarDetallesPorPantalla();
 		System.out.println(mensaje);
 	}
 

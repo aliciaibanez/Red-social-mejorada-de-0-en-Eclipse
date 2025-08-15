@@ -43,6 +43,8 @@ public class Entrada {
 		return momentoPublicacion;
 
 	}
+	
+	
 
 	public String toString() {
 		String publicadoHaceStr = "";
@@ -74,8 +76,8 @@ public class Entrada {
 		}
 		StringBuilder textoADevolver = new StringBuilder();
 
-		return textoADevolver.append(getUsuario()).append("\n").append(publicadoHaceStr).append("\n")
-				.append(getCantidadMeGusta()).append("\n").append(comentariosStr).append("\n").toString();
+		return textoADevolver.append(getUsuario()).append("\n").append(publicadoHaceStr)
+				.append("\n").append(getCantidadMeGusta()).append("\n").append(comentariosStr).append("\n").toString();
 	}
 
 	public void mostrarDetallesPorPantalla() {
@@ -83,8 +85,8 @@ public class Entrada {
 		for (String comentario : comentarios) {
 			comentariosStr += comentario;
 		}
-		System.out.println(usuario + getMomentoPublicacion() + cantidadMeGusta + comentariosStr);
-
+		System.out.println (usuario + getMomentoPublicacion() + cantidadMeGusta + comentariosStr);
+				
 	}
 
 }
