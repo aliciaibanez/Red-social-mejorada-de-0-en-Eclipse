@@ -38,8 +38,8 @@ public class EntradaEvento extends Entrada {
 
 		StringBuilder textoADevolver = new StringBuilder();
 
-		return textoADevolver.append(getUsuario()).append("\n").append(evento).append("\n").append(publicadoHaceStr)
-				.append("\n").append(getCantidadMeGusta()).append("\n").toString();
+		return textoADevolver.append(getUsuario()).append("\n").append(publicadoHaceStr)
+				.append("\n").append(getCantidadMeGusta()).append("\n").append(evento).append("\n").toString();
 	}
 
 }

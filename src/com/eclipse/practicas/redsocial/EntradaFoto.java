@@ -52,9 +52,7 @@ public class EntradaFoto extends Entrada {
 			comentariosStr = "No existen comentarios";
 		}
 		StringBuilder textoADevolver = new StringBuilder();
-
-		return textoADevolver.append(getUsuario()).append("\n").append(urlImagen).append("\n").append(titulo)
-				.append("\n").append(publicadoHaceStr).append("\n").append(getCantidadMeGusta()).append("\n")
-				.append(comentariosStr).append("\n").toString();
+		textoADevolver.append(super.toString()).append(urlImagen).append("\n").append(titulo).append("\n");
+		return textoADevolver.toString();
 	}
 }
