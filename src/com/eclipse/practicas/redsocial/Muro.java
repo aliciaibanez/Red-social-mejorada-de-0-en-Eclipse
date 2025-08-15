@@ -3,41 +3,23 @@ package com.eclipse.practicas.redsocial;
 import java.util.ArrayList;
 
 public class Muro {
-	private ArrayList<EntradaTexto> mensajes;
-	private ArrayList<EntradaFoto> fotos;
-	private ArrayList<EntradaEvento> eventos;
+	private ArrayList<Entrada> entradas;
 
 	public Muro() {
-		mensajes = new ArrayList<>();
-		fotos = new ArrayList<>();
-		eventos = new ArrayList<>();
+		entradas = new ArrayList<>();
 	}
 
-	public void addEntradaEvento(EntradaEvento entradaEvento) {
-		eventos.add(entradaEvento);
-	}
-
-	public void addEntradaTexto(EntradaTexto entradaTexto) {
-		mensajes.add(entradaTexto);
-	}
-
-	public void addEntradaFoto(EntradaFoto entradaFoto) {
-		fotos.add(entradaFoto);
+	public void addEntrada (Entrada entrada) {
+		entradas.add(entrada);
 	}
 
 	public String toString() {
 		StringBuilder textoADevolver = new StringBuilder();
-		for (EntradaTexto mensaje : mensajes) {
-			textoADevolver.append(mensaje).append("\n");
+		for (Entrada entrada : entradas) {
+			textoADevolver.append(entrada).append("\n");
 		}
 
-		for (EntradaFoto foto : fotos) {
-			textoADevolver.append(foto).append("\n");
-		}
-
-		for (EntradaEvento evento : eventos) {
-			textoADevolver.append(evento).append("\n");
-		}
+		
 		return textoADevolver.toString();
 	}
 
