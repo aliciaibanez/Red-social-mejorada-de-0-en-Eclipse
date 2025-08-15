@@ -24,8 +24,13 @@ public class EntradaFoto extends Entrada {
 		return titulo;
 	}
 
+	public void mostrarDetallesPorPantalla() {
+		StringBuilder textoAMostrar = new StringBuilder();
+		System.out.println(textoAMostrar.append(urlImagen).append(titulo));
+	}
+
 	public String toString() {
-		
+
 		String comentariosStr = "";
 		if (getComentarios().size() > 0) {
 			for (String comentario : getComentarios()) {

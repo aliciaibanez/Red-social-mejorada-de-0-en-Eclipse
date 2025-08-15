@@ -18,11 +18,13 @@ public class EntradaTexto extends Entrada {
 	}
 
 	public void mostrarDetallesPorPantalla() {
-		
+		StringBuilder textoAMostrar = new StringBuilder();
+		System.out.println(textoAMostrar.append(mensaje));
 	}
+
 	@Override
 	public String toString() {
-		
+
 		String comentariosStr = "";
 		if (getComentarios().size() > 0) {
 			for (String comentario : getComentarios()) {

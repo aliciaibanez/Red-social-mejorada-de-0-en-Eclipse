@@ -13,6 +13,15 @@ public class Muro {
 	public void addEntrada(Entrada entrada) {
 		entradas.add(entrada);
 	}
+	
+	public void mostrarDetallesPorPantalla() {
+		StringBuilder textoAMostrar = new StringBuilder();
+		
+		for (Entrada entrada : entradas) {
+			textoAMostrar.append(entrada).append("\n");
+		}
+		System.out.println(textoAMostrar);
+	}
 
 	public String toString() {
 		entradas.sort(Comparator.comparing(Entrada::getMomentoPublicacion));

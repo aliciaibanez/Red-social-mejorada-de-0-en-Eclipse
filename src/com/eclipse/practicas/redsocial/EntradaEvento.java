@@ -15,6 +15,11 @@ public class EntradaEvento extends Entrada {
 		return evento;
 
 	}
+	
+	public void mostrarDetallesPorPantalla() {
+		StringBuilder textoAMostrar = new StringBuilder();
+		System.out.println(textoAMostrar.append(evento));
+	}
 
 	public String toString() {
 		String publicadoHaceStr = "Escrito hace 10 segundos";
