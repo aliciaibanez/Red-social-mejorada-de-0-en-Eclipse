@@ -1,20 +1,19 @@
 package com.eclipse.practicas.redsocial;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.time.Duration;
+import java.time.LocalDateTime;
 
-public class EntradaTexto extends Entrada {
+public class EntradaEvento extends Entrada {
+	private String evento;
 
-	private String mensaje;
-
-	public EntradaTexto(String autor, String texto) {
+	public EntradaEvento(String autor, String evento) {
 		super(autor);
-		mensaje = texto;
+		this.evento = evento;
 	}
 
-	public String getMensaje() {
-		return mensaje;
+	public String getEvento() {
+		return evento;
+
 	}
 
 	public String toString() {
@@ -37,17 +36,10 @@ public class EntradaTexto extends Entrada {
 			publicadoHaceStr = "Escrito hace 10 segundos";
 		}
 
-		String comentariosStr = "";
-		if (getComentarios().size() > 0) {
-			for (String comentario : getComentarios()) {
-				comentariosStr += comentario + "\n";
-			}
-		} else {
-			comentariosStr = "No existen comentarios";
-		}
 		StringBuilder textoADevolver = new StringBuilder();
 
-		return textoADevolver.append(getUsuario()).append("\n").append(mensaje).append("\n").append(publicadoHaceStr)
-				.append("\n").append(getCantidadMeGusta()).append("\n").append(comentariosStr).append("\n").toString();
+		return textoADevolver.append(getUsuario()).append("\n").append(evento).append("\n").append(publicadoHaceStr)
+				.append("\n").append(getCantidadMeGusta()).append("\n").toString();
 	}
+
 }

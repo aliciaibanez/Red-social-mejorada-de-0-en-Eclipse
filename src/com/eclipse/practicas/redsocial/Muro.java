@@ -1,39 +1,47 @@
 package com.eclipse.practicas.redsocial;
+
 import java.util.ArrayList;
 
-public class Muro
-{
-    private ArrayList<EntradaTexto> mensajes;
-    private ArrayList<EntradaFoto> fotos;
-    public Muro()
-    {
-        mensajes = new ArrayList<>();
-        fotos = new ArrayList<>();
-    }
+public class Muro {
+	private ArrayList<EntradaTexto> mensajes;
+	private ArrayList<EntradaFoto> fotos;
+	private ArrayList<EntradaEvento> eventos;
 
-    public void addEntradaTexto(EntradaTexto entradaTexto)
-    {
-        mensajes.add(entradaTexto);
-    }
+	public Muro() {
+		mensajes = new ArrayList<>();
+		fotos = new ArrayList<>();
+		eventos = new ArrayList<>();
+	}
 
-    public void addEntradaFoto(EntradaFoto entradaFoto)
-    {
-        fotos.add(entradaFoto);
-    }
+	public void addEntradaEvento(EntradaEvento entradaEvento) {
+		eventos.add(entradaEvento);
+	}
 
-    public String toString() {
-        StringBuilder textoADevolver = new StringBuilder();
-        for (EntradaTexto mensaje : mensajes) {
-            textoADevolver.append(mensaje).append("\n");
-        }
+	public void addEntradaTexto(EntradaTexto entradaTexto) {
+		mensajes.add(entradaTexto);
+	}
 
-        for (EntradaFoto foto : fotos) {
-            textoADevolver.append(foto).append("\n");
-        }
-        return textoADevolver.toString();
-    }
+	public void addEntradaFoto(EntradaFoto entradaFoto) {
+		fotos.add(entradaFoto);
+	}
 
-    public void imprimirMuro() {
-        System.out.println(toString());
-    }
+	public String toString() {
+		StringBuilder textoADevolver = new StringBuilder();
+		for (EntradaTexto mensaje : mensajes) {
+			textoADevolver.append(mensaje).append("\n");
+		}
+
+		for (EntradaFoto foto : fotos) {
+			textoADevolver.append(foto).append("\n");
+		}
+
+		for (EntradaEvento evento : eventos) {
+			textoADevolver.append(evento).append("\n");
+		}
+		return textoADevolver.toString();
+	}
+
+	public void imprimirMuro() {
+		System.out.println(toString());
+	}
 }

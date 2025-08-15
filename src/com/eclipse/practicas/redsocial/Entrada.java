@@ -4,16 +4,30 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Entrada {
-	public String usuario;
-	public LocalDateTime momentoPublicacion;
-	public int cantidadMeGusta;
-	public ArrayList<String> comentarios;
+	private String usuario;
+	private LocalDateTime momentoPublicacion;
+	private int cantidadMeGusta;
+	private ArrayList<String> comentarios;
 
 	public Entrada(String autor) {
 		usuario = autor;
 		momentoPublicacion = LocalDateTime.now();
 		cantidadMeGusta = 0;
 		comentarios = new ArrayList<>();
+	}
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public int getCantidadMeGusta() {
+		return cantidadMeGusta;
+	}
+
+	public ArrayList<String> getComentarios() {
+
+		return comentarios;
+
 	}
 
 	public void meGusta() {

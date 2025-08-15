@@ -26,7 +26,7 @@ public class EntradaFoto extends Entrada {
 
 	public String toString() {
 		String publicadoHaceStr = "";
-		Duration publicadoHace = Duration.between(momentoPublicacion, LocalDateTime.now());
+		Duration publicadoHace = Duration.between(getMomentoPublicacion(), LocalDateTime.now());
 		long segundos = publicadoHace.toSeconds();
 		long minutos = publicadoHace.toMinutes();
 		long horas = publicadoHace.toHours();
@@ -44,8 +44,8 @@ public class EntradaFoto extends Entrada {
 			publicadoHaceStr = "Escrito hace 10 segundos";
 		}
 		String comentariosStr = "";
-		if (comentarios.size() > 0) {
-			for (String comentario : comentarios) {
+		if (getComentarios().size() > 0) {
+			for (String comentario : getComentarios()) {
 				comentariosStr += comentario + "\n";
 			}
 		} else {
@@ -53,8 +53,8 @@ public class EntradaFoto extends Entrada {
 		}
 		StringBuilder textoADevolver = new StringBuilder();
 
-		return textoADevolver.append(usuario).append("\n").append(urlImagen).append("\n").append(titulo).append("\n")
-				.append(publicadoHaceStr).append("\n").append(cantidadMeGusta).append("\n").append(comentariosStr)
-				.append("\n").toString();
+		return textoADevolver.append(getUsuario()).append("\n").append(urlImagen).append("\n").append(titulo)
+				.append("\n").append(publicadoHaceStr).append("\n").append(getCantidadMeGusta()).append("\n")
+				.append(comentariosStr).append("\n").toString();
 	}
 }
