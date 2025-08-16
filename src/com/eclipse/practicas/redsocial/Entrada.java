@@ -4,7 +4,7 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-public class Entrada {
+public abstract class Entrada {
 	private String usuario;
 	private LocalDateTime momentoPublicacion;
 	private int cantidadMeGusta;
@@ -80,13 +80,6 @@ public class Entrada {
 				.append("\n").append(getCantidadMeGusta()).append("\n").append(comentariosStr).append("\n").toString();
 	}
 
-	public void mostrarDetallesPorPantalla() {
-		String comentariosStr = "";
-		for (String comentario : comentarios) {
-			comentariosStr += comentario;
-		}
-		System.out.println (usuario + getMomentoPublicacion() + cantidadMeGusta + comentariosStr);
-				
-	}
+	public abstract void mostrarDetallesPorPantalla();
 
 }
