@@ -75,5 +75,24 @@ public class MuroTest {
 				+ "\n";
 		assertEquals(esperado, muro.toString());
 	}
+	
+	@Test
+	public void testGetUrlsFotos() {
+	    Muro muro = new Muro();
 
+	    Entrada entrada01 = new EntradaTexto("Nacho", "Recién llegado de mis vacaciones en Hawai!");
+	    Entrada entrada02 = new EntradaFoto("Luis", "https://bit.ly/2W1dO09", "Gracias");
+	    Entrada entrada03 = new EntradaTexto("Begoña", "Está lloviendo ahí fuera...");
+	    Entrada entrada04 = new EntradaFoto("Cristina", "https://bit.ly/3cY9vtD", "Una foto de mi nevera");
+
+	    muro.addEntrada(entrada01);
+	    muro.addEntrada(entrada02);
+	    muro.addEntrada(entrada03);
+	    muro.addEntrada(entrada04);
+
+	    // Valor esperado: todas las URLs de fotos, cada una en una línea
+	    String esperado = "https://bit.ly/2W1dO09\nhttps://bit.ly/3cY9vtD\n";
+
+	    assertEquals(esperado, muro.getUrlsFotos());
+	}
 }

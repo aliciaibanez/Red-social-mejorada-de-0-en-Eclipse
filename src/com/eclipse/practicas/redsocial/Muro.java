@@ -13,11 +13,26 @@ public class Muro {
 	public void addEntrada(Entrada entrada) {
 		entradas.add(entrada);
 	}
-	
-	
+
+	public String getUrlsFotos() {
+		String urlStr = "";
+		ArrayList<String> urls = new ArrayList<>();
+		for (Entrada entrada : entradas) {
+			if (entrada instanceof EntradaFoto) {
+				EntradaFoto foto = (EntradaFoto) entrada;
+				urls.add(foto.getUrlImagen());
+				urlStr += foto.getUrlImagen() + "\n";
+
+			}
+
+		}
+
+		return urlStr;
+	}
+
 	public void mostrarDetallesPorPantalla() {
 		StringBuilder textoAMostrar = new StringBuilder();
-		
+
 		for (Entrada entrada : entradas) {
 			entrada.mostrarDetallesPorPantalla();
 		}
