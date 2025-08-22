@@ -9,8 +9,8 @@ public class EntradaFoto extends Entrada {
 	private String urlImagen;
 	private String titulo;
 
-	public EntradaFoto(String autor, String url, String titulo) {
-		super(autor);
+	public EntradaFoto(String autor, String url, String titulo, String momentoPublicacion) {
+		super(autor, momentoPublicacion);
 		urlImagen = url;
 		this.titulo = titulo;
 
@@ -23,10 +23,11 @@ public class EntradaFoto extends Entrada {
 	public String getTituloImagen() {
 		return titulo;
 	}
+
 	@Override
 	public void mostrarDetallesPorPantalla() {
-		System.out.println ("urlImagen");
-		System.out.println ("titulo");
+		System.out.println("urlImagen");
+		System.out.println("titulo");
 	}
 
 	public String toString() {

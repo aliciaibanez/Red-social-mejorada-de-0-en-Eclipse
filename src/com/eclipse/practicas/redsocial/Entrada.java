@@ -6,15 +6,15 @@ import java.util.ArrayList;
 
 public abstract class Entrada {
 	private String usuario;
-	private LocalDateTime momentoPublicacion;
+	private String momentoPublicacion;
 	private int cantidadMeGusta;
 	private ArrayList<String> comentarios;
 
-	public Entrada(String autor) {
+	public Entrada(String autor, String momentoPublicacion) {
 		usuario = autor;
-		momentoPublicacion = LocalDateTime.now();
 		cantidadMeGusta = 0;
 		comentarios = new ArrayList<>();
+		this.momentoPublicacion = momentoPublicacion;
 	}
 
 	public String getUsuario() {
@@ -39,32 +39,12 @@ public abstract class Entrada {
 		comentarios.add(text);
 	}
 
-	public LocalDateTime getMomentoPublicacion() {
+	public String getMomentoPublicacion() {
 		return momentoPublicacion;
 
 	}
-	
-	
 
 	public String toString() {
-		String publicadoHaceStr = "";
-		Duration publicadoHace = Duration.between(getMomentoPublicacion(), LocalDateTime.now());
-		long segundos = publicadoHace.toSeconds();
-		long minutos = publicadoHace.toMinutes();
-		long horas = publicadoHace.toHours();
-		long dias = publicadoHace.toDays();
-
-		if (segundos < 59) {
-			publicadoHaceStr = "Escrito hace 10 segundos";
-		} else if (minutos < 59) {
-			publicadoHaceStr = "Escrito hace 10 segundos";
-		} else if (horas < 23) {
-			publicadoHaceStr = "Escrito hace 10 segundos";
-		} else if (dias < 359) {
-			publicadoHaceStr = "Escrito hace 10 segundos";
-		} else {
-			publicadoHaceStr = "Escrito hace 10 segundos";
-		}
 
 		String comentariosStr = "";
 		if (getComentarios().size() > 0) {
@@ -76,8 +56,8 @@ public abstract class Entrada {
 		}
 		StringBuilder textoADevolver = new StringBuilder();
 
-		return textoADevolver.append(getUsuario()).append("\n").append(publicadoHaceStr)
-				.append("\n").append(getCantidadMeGusta()).append("\n").append(comentariosStr).append("\n").toString();
+		return textoADevolver.append(getUsuario()).append("\n").append(momentoPublicacion).append("\n")
+				.append(getCantidadMeGusta()).append("\n").append(comentariosStr).append("\n").toString();
 	}
 
 	public abstract void mostrarDetallesPorPantalla();
