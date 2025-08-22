@@ -1,5 +1,10 @@
 package com.eclipse.practicas.redsocial;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Comparator;
 
@@ -12,6 +17,22 @@ public class Muro {
 
 	public void addEntrada(Entrada entrada) {
 		entradas.add(entrada);
+	}
+
+	public boolean saveToDisk() {
+		Path rutaArchivo = Paths.get(
+				"C:/Users/Usuario/Desktop/Alicia/DAM/Programación y Entornos de desarrollo/Red social/com.eclipse.practicas.redsocial/muro.txt");
+		try {
+			BufferedWriter archivo = Files.newBufferedWriter(rutaArchivo);
+			archivo.write(toString());
+			archivo.close();
+			return true;
+		} catch (IOException e) {
+			System.out.println("¡Vaya, algo ha ido mal al escribir el archivo!");
+			System.out.println(e.toString());
+			return false;
+		}
+
 	}
 
 	public String getUrlsFotos() {

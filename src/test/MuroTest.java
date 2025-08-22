@@ -20,13 +20,13 @@ public class MuroTest {
 		Entrada entrada01 = new EntradaTexto("Nacho", "Recién llegado de mis vacaciones en Hawai!",
 				"4 de enero de 2024 a las 17:35");
 		Entrada entrada02 = new EntradaFoto("Luis", "https://bit.ly/2W1dO09", "Gracias",
-				"5 de enero de 2024 a las 17:35");
-		Entrada entrada03 = new EntradaTexto("Begoña", "Está lloviendo ahí fuera...", "6 de enero de 2024 a las 17:35");
+				"5 de enero de 2024 a las 17:40");
+		Entrada entrada03 = new EntradaTexto("Begoña", "Está lloviendo ahí fuera...", "6 de enero de 2024 a las 17:45");
 		Entrada entrada04 = new EntradaFoto("Cristina", "https://bit.ly/3cY9vtD", "Una foto de mi nevera",
-				"7 de enero de 2024 a las 17:35");
-		Entrada entrada05 = new EntradaEvento("Pepe", "Hoy, fiesta en mi casa", "8 de enero de 2024 a las 17:35");
+				"7 de enero de 2024 a las 17:50");
+		Entrada entrada05 = new EntradaEvento("Pepe", "Hoy, fiesta en mi casa", "8 de enero de 2024 a las 17:55");
 		Entrada entrada06 = new EntradaEvento("Pepita", "Cena de empresa a las 21:00H",
-				"9 de enero de 2024 a las 17:35");
+				"9 de enero de 2024 a las 18:00");
 
 		muro.addEntrada(entrada01);
 		muro.addEntrada(entrada02);
@@ -39,19 +39,21 @@ public class MuroTest {
 		String esperado = "Nacho\n" + "4 de enero de 2024 a las 17:35\n" + "0\n" + "No existen comentarios\n"
 				+ "Recién llegado de mis vacaciones en Hawai!\n" + "\n"
 
-				+ "Luis\n" + "5 de enero de 2024 a las 17:35\n" + "0\n" + "No existen comentarios\n"
+				+ "Luis\n" + "5 de enero de 2024 a las 17:40\n" + "0\n" + "No existen comentarios\n"
 				+ "https://bit.ly/2W1dO09\n" + "Gracias\n" + "\n"
 
-				+ "Begoña\n" + "6 de enero de 2024 a las 17:35\n" + "0\n" + "No existen comentarios\n"
+				+ "Begoña\n" + "6 de enero de 2024 a las 17:45\n" + "0\n" + "No existen comentarios\n"
 				+ "Está lloviendo ahí fuera...\n" + "\n"
 
-				+ "Cristina\n" + "7 de enero de 2024 a las 17:35\n" + "0\n"
+				+ "Cristina\n" + "7 de enero de 2024 a las 17:50\n" + "0\n" + "No existen comentarios\n"
+				+ "https://bit.ly/3cY9vtD\n" + "Una foto de mi nevera\n" + "\n"
 
-				+ "No existen comentarios\n" + "https://bit.ly/3cY9vtD\n" + "Una foto de mi nevera\n" + "\n" + "Pepe\n"
-				+ "8 de enero de 2024 a las 17:35\n" + "0\n" + "Hoy, fiesta en mi casa\n" + "\n" + "Pepita\n"
+				+ "Pepe\n" + "8 de enero de 2024 a las 17:55\n" + "0\n" + "Hoy, fiesta en mi casa\n" + "\n"
 
-				+ "9 de enero de 2024 a las 17:35\n" + "0\n" + "Cena de empresa a las 21:00H\n" + "\n";
+				+ "Pepita\n" + "9 de enero de 2024 a las 18:00\n" + "0\n" + "Cena de empresa a las 21:00H\n" + "\n";
+
 		assertEquals(esperado, muro.toString());
+		muro.saveToDisk();
 	}
 
 	@Test
@@ -61,10 +63,10 @@ public class MuroTest {
 		Entrada entrada01 = new EntradaTexto("Nacho", "Recién llegado de mis vacaciones en Hawai!",
 				"4 de enero de 2024 a las 17:35");
 		Entrada entrada02 = new EntradaFoto("Luis", "https://bit.ly/2W1dO09", "Gracias",
-				"4 de enero de 2024 a las 17:35");
-		Entrada entrada03 = new EntradaTexto("Begoña", "Está lloviendo ahí fuera...", "4 de enero de 2024 a las 17:35");
+				"5 de enero de 2024 a las 17:40");
+		Entrada entrada03 = new EntradaTexto("Begoña", "Está lloviendo ahí fuera...", "6 de enero de 2024 a las 17:45");
 		Entrada entrada04 = new EntradaFoto("Cristina", "https://bit.ly/3cY9vtD", "Una foto de mi nevera",
-				"4 de enero de 2024 a las 17:35");
+				"7 de enero de 2024 a las 17:50");
 
 		muro.addEntrada(entrada01);
 		muro.addEntrada(entrada02);
@@ -74,5 +76,6 @@ public class MuroTest {
 		String esperado = "https://bit.ly/2W1dO09\nhttps://bit.ly/3cY9vtD\n";
 
 		assertEquals(esperado, muro.getUrlsFotos());
+
 	}
 }

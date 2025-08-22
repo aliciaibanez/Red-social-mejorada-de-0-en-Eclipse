@@ -57,7 +57,7 @@ public abstract class Entrada {
 		StringBuilder textoADevolver = new StringBuilder();
 
 		return textoADevolver.append(getUsuario()).append("\n").append(momentoPublicacion).append("\n")
-				.append(getCantidadMeGusta()).append("\n").append(comentariosStr).append("\n").toString();
+				.append(getCantidadMeGusta()).append("\n").toString();
 	}
 
 	public abstract void mostrarDetallesPorPantalla();

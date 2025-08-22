@@ -34,7 +34,7 @@ public class EntradaTexto extends Entrada {
 			comentariosStr = "No existen comentarios";
 		}
 		StringBuilder textoADevolver = new StringBuilder();
-		textoADevolver.append(super.toString()).append(mensaje).append("\n");
+		textoADevolver.append(super.toString()).append(comentariosStr).append("\n").append(mensaje).append("\n");
 		return textoADevolver.toString();
 	}
 }

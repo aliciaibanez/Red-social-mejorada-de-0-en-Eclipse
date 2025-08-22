@@ -41,7 +41,7 @@ public class EntradaFoto extends Entrada {
 			comentariosStr = "No existen comentarios";
 		}
 		StringBuilder textoADevolver = new StringBuilder();
-		textoADevolver.append(super.toString()).append(urlImagen).append("\n").append(titulo).append("\n");
+		textoADevolver.append(super.toString()).append(comentariosStr).append("\n").append(urlImagen).append("\n").append(titulo).append("\n");
 		return textoADevolver.toString();
 	}
 }

@@ -27,8 +27,7 @@ public class EntradaEvento extends Entrada {
 
 		StringBuilder textoADevolver = new StringBuilder();
 
-		return textoADevolver.append(getUsuario()).append("\n").append(getMomentoPublicacion()).append("\n")
-				.append(getCantidadMeGusta()).append("\n").append(evento).append("\n").toString();
+		return textoADevolver.append(super.toString()).append(evento).append("\n").toString();
 	}
 
 }
